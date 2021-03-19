@@ -10,13 +10,4 @@ class Backer
         ProjectBacker.new(project, self)
     end
 
-    def backed_projects
-        project_backer_instances = ProjectBacker.all.select do |project_backer|
-            project_backer.backer == self
-        end
-
-        project_backer_instances.map do |pbi|
-            pbi.project
-        end
-    end
 end
